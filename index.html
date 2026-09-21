@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Taquillera | Tacos Mexicanos a Domicilio</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo-group">
+      <img src="assets/logo.jpg" alt="La Taquillera" class="logo-img">
+      <span class="brand-name">LA TAQUILLERA</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:8181111999" class="phone-pill">📞 81 8111 1999</a>
+      <button class="cart-btn" id="openCart">🛒 <span id="cartCount">0</span></button>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="assets/logo.jpg" alt="La Taquillera Logo" class="hero-logo">
+    <h1>TACOS MEXICANOS<br>COMO EN EL CINE</h1>
+    <p>Sabor autentico, entrega a domicilio y para llevar en San Nicolás de los Garza</p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">Ordenar Ahora</a>
+      <a href="tel:8181111999" class="btn-secondary">Llamar: 81 8111 1999</a>
+    </div>
+  </div>
+</section>
+
+<section class="info-strip">
+  <div class="info-item">🛵 <span>Entrega a domicilio</span></div>
+  <div class="info-item">🌮 <span>Tacos 100% mexicanos</span></div>
+  <div class="info-item">⏱️ <span>Listo en 20-30 min</span></div>
+  <div class="info-item">📍 <span>Balcones de las Puentes</span></div>
+</section>
+
+<section class="menu-section" id="menu">
+  <h2 class="section-title">Nuestro Menú</h2>
+  <p class="section-subtitle">Elige tus favoritos y agrégalos al carrito</p>
+
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-cat="tacos">Tacos</button>
+    <button class="tab-btn" data-cat="antojitos">Antojitos</button>
+    <button class="tab-btn" data-cat="platillos">Platillos Fuertes</button>
+    <button class="tab-btn" data-cat="bebidas">Bebidas</button>
+    <button class="tab-btn" data-cat="postres">Postres</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="about-container">
+    <img src="assets/logo.jpg" alt="La Taquillera" class="about-img">
+    <div class="about-text">
+      <h2>Sobre La Taquillera</h2>
+      <p>En <strong>La Taquillera</strong> creemos que cada taco merece su propio estreno. Preparamos nuestras salsas, tortillas y guisados al estilo tradicional mexicano, con ese toque casero que se siente como en casa — o como en la butaca de tu cine favorito.</p>
+      <p>Desde San Nicolás de los Garza llevamos sabor autentico hasta tu puerta, con ingredientes frescos y recetas que honran la cocina mexicana de siempre.</p>
+    </div>
+  </div>
+</section>
+
+<section class="location" id="ubicacion">
+  <h2 class="section-title">Ubicación y Contacto</h2>
+  <div class="location-grid">
+    <div class="location-card">
+      <h3>📍 Dirección</h3>
+      <p>Av. Cordillera de los Andes 857<br>Balcones de las Puentes<br>66466 San Nicolás de los Garza, N.L.</p>
+      <h3>📞 Teléfono</h3>
+      <p><a href="tel:8181111999">81 8111 1999</a></p>
+      <h3>🕑 Horario</h3>
+      <p>Lunes a Domingo: 12:00 pm - 10:00 pm</p>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Av.+Cordillera+de+los+Andes+857,+Balcones+de+las+Puentes,+66466+San+Nicol%C3%A1s+de+los+Garza,+N.L.&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contacto">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="La Taquillera" class="footer-logo">
+      <p>La Taquillera &copy; 2026. Tacos Mexicanos.</p>
+    </div>
+    <div class="footer-contact">
+      <p>📞 81 8111 1999</p>
+      <p>📍 Av. Cordillera de los Andes 857, Balcones de las Puentes, 66466 San Nicolás de los Garza, N.L.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Tu Orden</h3>
+    <button id="closeCart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total:</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+
+    <div class="order-type">
+      <label><input type="radio" name="orderType" value="Entrega a domicilio" checked> Entrega a domicilio</label>
+      <label><input type="radio" name="orderType" value="Para recoger"> Para recoger</label>
+    </div>
+
+    <input type="text" id="customerName" placeholder="Tu nombre" class="cart-input">
+    <input type="tel" id="customerPhone" placeholder="Tu teléfono" class="cart-input">
+    <input type="text" id="customerAddress" placeholder="Dirección de entrega (si aplica)" class="cart-input">
+
+    <button class="checkout-btn" id="checkoutBtn">Enviar pedido por WhatsApp</button>
+  </div>
+</aside>
+
+<a href="#menu" class="floating-cta">🌮 Ordenar</a>
+
+<script src="menu-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
